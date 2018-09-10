@@ -1,0 +1,108 @@
+﻿@charset "utf-8";
+
+@font-face {
+    font-family: Champagne;
+    src: url('cac_champagne.woff') format('woff'),
+        url('cac_champagne.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Dobkin;
+    src: url('DobkinPlain.woff') format('woff'),
+        url('DobkinPlain.ttf') format('tff');
+}
+
+/*
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 2
+   Case Problem 4
+   
+   Great Lakescape Lodge Style Sheet
+   Author: Ryan Wahl
+   Date:   9.10.18
+   
+   Filename: lake_styles.css
+
+*/
+
+/* Style selectors */
+html {
+    background-color: rgb(210, 229, 139);
+}
+
+body {
+    background-color: rgb(247, 247, 227);
+}
+
+section#rightcol {
+    background-color: rgba(237, 184, 250, 0.671);
+    margin: 0px;
+}
+
+section#leftcol {
+    margin: 0px;
+    height: 100%;
+}
+
+section#leftcol>h1 {
+    font-family: Champagne;
+    font-size: 3em;
+    padding-left: 5px;
+    font-weight: normal;
+}
+
+section#leftcol>p {
+    padding-left: 10px;
+}
+
+aside:first-of-type {
+    background-color: rgba(240, 125, 49, 0.753);
+    line-height: 1.5em;
+}
+
+aside:last-of-type {
+    background-color: rgba(190, 157, 8, 0.589);
+    padding-left: 5px;
+}
+
+aside:last-of-type h2 {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+aside:last-of-type p {
+    padding-left: 10px;
+    font-size: 0.9em;
+}
+
+aside h1 {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+/* Navigation Selectors */
+header>nav a {
+    color: white;
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+header>nav a:link,
+header>nav a:visited {
+    background-color: purple;
+}
+
+header>nav a:hover,
+header>nav a:active {
+    background-color: rgb(175, 2, 175);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: darkslategray;
+    text-align: center;
+    color: white;
+}
