@@ -1,15 +1,17 @@
 ﻿@charset "utf-8";
 
+/* The champagne font face. For the cursive. */
 @font-face {
     font-family: Champagne;
     src: url('cac_champagne.woff') format('woff'),
         url('cac_champagne.ttf') format('truetype');
 }
 
+/* The dobkin font face. Another cursive style. */
 @font-face {
     font-family: Dobkin;
     src: url('DobkinPlain.woff') format('woff'),
-        url('DobkinPlain.ttf') format('tff');
+        url('DobkinPlain.ttf') format('truetype');
 }
 
 /*
@@ -24,6 +26,10 @@
    Filename: lake_styles.css
 
 */
+/* Was used for debugging.
+ * {
+    border: 1px solid red;
+} */
 
 /* Style selectors */
 html {
@@ -31,41 +37,54 @@ html {
 }
 
 body {
+    /* Sets the background color for the body. */
     background-color: rgb(247, 247, 227);
 }
 
 section#rightcol {
     background-color: rgba(237, 184, 250, 0.671);
-    margin: 0px;
+    /* Sets the bottom padding. */
+    padding-bottom: 10.5em;
 }
 
-section#leftcol {
-    margin: 0px;
-    height: 100%;
-}
-
+/* The styling for the h1 within the section#leftcol nested. */
 section#leftcol>h1 {
+    /* Defines the font family to make the text cursive.*/
     font-family: Champagne;
-    font-size: 3em;
+    /* Changes the font size to 3.7em. (3.7 times the normal size of m) */
+    font-size: 3.7em;
+    /* Sets the left padding to 5 pixels. */
     padding-left: 5px;
+    /* Removes the bold. */
     font-weight: normal;
+    /* Sets the margin top and bottom to 10px. */
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+/* The paragraph of the section#leftcol. (id of leftcol) */
 section#leftcol>p {
     padding-left: 10px;
+    /* Indents the text. To look better. */
+    text-indent: 0.8em;
 }
 
+/* Gets the first aside in the page. */
 aside:first-of-type {
     background-color: rgba(240, 125, 49, 0.753);
+    /* Changes the line-height to 1.5 em; (The space between the lines) */
     line-height: 1.5em;
 }
 
+/* The last aside element in the page. */
 aside:last-of-type {
     background-color: rgba(190, 157, 8, 0.589);
     padding-left: 5px;
 }
 
+/* The last h2 in the page. */
 aside:last-of-type h2 {
+    /* Removes the bold. */
     font-weight: normal;
     font-size: 1.1em;
 }
@@ -76,31 +95,93 @@ aside:last-of-type p {
 }
 
 aside h1 {
+    /* Aligns the text in the center.  */
     text-align: center;
     font-size: 1.3em;
 }
 
+/* All h2s in the section with the id of rightcol */
+section#rightcol h2 {
+    /* Changes the text indentation. (The space before the line starts). */
+    text-indent: 0.9em;
+    /* Changed the font to dobkin for a difference.*/
+    font-family: Dobkin;
+    font-size: 2em;
+}
+
 /* Navigation Selectors */
 header>nav a {
+    /* Sets the text color to white. */
     color: white;
+    /* Removes the underline underneath the links. */
     text-decoration: none;
     padding-top: 10px;
     padding-bottom: 10px;
 
 }
 
+/* All visited and un visided a nested within a nav that is directly nested in a header. */
 header>nav a:link,
 header>nav a:visited {
     background-color: purple;
 }
 
+/* All hover and active a nested within a nav that is directly nested in a header. */
 header>nav a:hover,
 header>nav a:active {
     background-color: rgb(175, 2, 175);
 }
 
-/* Footer Styles */
+section#rightcol nav ul {
+    text-align: center;
+    /* Removes the bullet points from the list. */
+    list-style-type: none;
+}
 
+section#rightcol nav ul li {
+    text-align: left;
+}
+
+section#rightcol nav ul a {
+    text-decoration: none;
+}
+
+section#rightcol nav ul a:link,
+section#rightcol nav ul a:visited {
+    color: gray;
+}
+
+section#rightcol nav ul a:hover,
+section#rightcol nav ul a:active {
+    color: rgb(39, 66, 66);
+}
+
+/* All blockquotes */
+blockquote {
+    padding-top: 20px;
+    color: darkorchid;
+    /* Sets the quotes characters using character codes. */
+    quotes: "\201C""\201D";
+    font-size: 0.95em;
+    line-height: 1.3em;
+}
+
+/* Before the text begins in the blockquote */
+blockquote::before {
+    /* Inserts in an open quote. */
+    content: open-quote;
+    font-size: 1.9em;
+}
+
+/* After the text ends in the blockquote. */
+blockquote::after {
+    /* Inserts in a close quote. */
+    content: close-quote;
+    font-size: 1.8em;
+}
+
+/* Footer Styles */
+/* The footer of the page. */
 footer {
     background-color: darkslategray;
     text-align: center;
